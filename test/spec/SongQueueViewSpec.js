@@ -1,4 +1,4 @@
-describe('SongQueueView', function() {
+ describe('SongQueueView', function() {
   var view, fakeSongs;
 
   beforeEach(function() {
@@ -16,14 +16,14 @@ describe('SongQueueView', function() {
     ]);
   });
 
-  xit('creates SongQueueEntryViews for each queued song & renders them', function() {
+  it('creates SongQueueEntryViews for each queued song & renders them', function() {
     sinon.spy(SongQueueEntryView.prototype, 'render');
     view = new SongQueueView({collection: fakeSongs});
     view.render();
     expect(SongQueueEntryView.prototype.render).to.have.been.called;
   });
 
-  xit('renders when add or remove event fires from the song queue collection', function() {
+  it('renders when add or remove event fires from the song queue collection', function() {
     sinon.spy(SongQueueView.prototype, 'render');
     view = new SongQueueView({collection: fakeSongs});
     view.collection.add({
