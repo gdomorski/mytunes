@@ -7,10 +7,7 @@
 
     events: {
       'click': function() {
-        this.model.play();
         this.model.enqueue();
-        SongQueueEntryView();
-        console.log(this);
       }
     },
 
